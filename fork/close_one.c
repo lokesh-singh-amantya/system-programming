@@ -13,9 +13,8 @@ int main(){
 	}
 
 	chdir("/usr/include");
-
+	fflush(stdout);
 	execl("/bin/ls", "/bin/ls", ".", (char*) NULL);
-
 	perror("exec failed");
 
 	return 0;
